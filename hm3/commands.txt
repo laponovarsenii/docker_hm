@@ -1,0 +1,14 @@
+
+cd ~/Desktop/docker/hm3
+
+
+mkdir -p data
+
+
+docker build -t memory-monitor .
+
+
+docker run --rm -v $(pwd)/data:/app/data memory-monitor
+
+
+cat data/output.txt
